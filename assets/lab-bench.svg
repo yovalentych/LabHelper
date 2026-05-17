@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Laboratory bench with flasks and notebook">
+  <defs>
+    <linearGradient id="bench" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#2b6f68"/>
+      <stop offset="1" stop-color="#102a28"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="0" y1="0" y2="1">
+      <stop stop-color="#d9fff7" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#8fd3c4" stop-opacity=".42"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bench)"/>
+  <rect y="340" width="960" height="200" fill="#163633"/>
+  <rect x="82" y="112" width="210" height="300" rx="18" fill="#f5fff9" opacity=".16"/>
+  <rect x="118" y="146" width="138" height="18" rx="9" fill="#f5fff9" opacity=".28"/>
+  <rect x="118" y="190" width="108" height="12" rx="6" fill="#f5fff9" opacity=".18"/>
+  <rect x="118" y="222" width="132" height="12" rx="6" fill="#f5fff9" opacity=".18"/>
+  <path d="M612 130h54v118l96 148c22 34-2 79-42 79H558c-40 0-64-45-42-79l96-148V130Z" fill="url(#glass)" stroke="#e9fffb" stroke-width="10"/>
+  <path d="M554 396h170c10 20-4 42-27 42H581c-23 0-37-22-27-42Z" fill="#d66b3d" opacity=".76"/>
+  <path d="M402 185h42v120l54 92c20 34-4 77-44 77H292c-40 0-64-43-44-77l54-92V185h42v132l-60 102c-6 10 1 23 13 23h152c12 0 19-13 13-23l-60-102V185Z" fill="url(#glass)" stroke="#e9fffb" stroke-width="9"/>
+  <path d="M290 406h166c8 19-6 36-27 36H317c-21 0-35-17-27-36Z" fill="#62b6a4" opacity=".82"/>
+  <rect x="680" y="306" width="152" height="180" rx="16" fill="#f9fff9" opacity=".2"/>
+  <rect x="704" y="336" width="104" height="10" rx="5" fill="#f9fff9" opacity=".35"/>
+  <rect x="704" y="366" width="82" height="10" rx="5" fill="#f9fff9" opacity=".25"/>
+  <circle cx="145" cy="450" r="26" fill="#d66b3d" opacity=".7"/>
+  <circle cx="204" cy="450" r="26" fill="#62b6a4" opacity=".72"/>
+  <circle cx="263" cy="450" r="26" fill="#f0d177" opacity=".72"/>
+</svg>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#153d3a" />
+    <title>LabHelper</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="top-panel">
+        <div>
+          <p class="eyebrow">мобільний лабораторний журнал</p>
+          <h1>LabHelper</h1>
+        </div>
+        <button class="icon-button" id="voiceToggle" type="button" aria-label="Увімкнути голосовий режим">
+          <span class="mic-icon"></span>
+        </button>
+      </section>
+
+      <section class="status-strip" aria-live="polite">
+        <div>
+          <span class="status-dot" id="voiceDot"></span>
+          <span id="voiceStatus">Голосовий помічник готовий</span>
+        </div>
+        <span id="savedStatus">Збережено локально</span>
+      </section>
+
+      <nav class="tabs" aria-label="Розділи">
+        <button class="tab active" type="button" data-view="library">Методики</button>
+        <button class="tab" type="button" data-view="run">В роботі</button>
+        <button class="tab" type="button" data-view="notes">Записи</button>
+      </nav>
+
+      <section class="view active" id="libraryView">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">конструювання</p>
+            <h2>Шаблони методик</h2>
+          </div>
+          <button class="primary-button" id="newProtocol" type="button">Новий</button>
+        </div>
+
+        <div class="protocol-list" id="protocolList"></div>
+
+        <form class="editor" id="protocolForm">
+          <label>
+            Назва методики
+            <input id="protocolTitle" name="title" type="text" autocomplete="off" required />
+          </label>
+          <label>
+            Мета
+            <textarea id="protocolGoal" name="goal" rows="2" required></textarea>
+          </label>
+          <label>
+            Реагенти та матеріали
+            <textarea id="protocolMaterials" name="materials" rows="3"></textarea>
+          </label>
+          <label>
+            Кроки виконання
+            <textarea id="protocolSteps" name="steps" rows="6" placeholder="Один крок на рядок"></textarea>
+          </label>
+          <label>
+            Застереження
+            <textarea id="protocolSafety" name="safety" rows="2"></textarea>
+          </label>
+          <button class="primary-button full" type="submit">Зберегти методику</button>
+        </form>
+      </section>
+
+      <section class="view" id="runView">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">поточний експеримент</p>
+            <h2 id="runTitle">Оберіть методику</h2>
+          </div>
+          <button class="secondary-button" id="startRun" type="button">Запустити</button>
+        </div>
+
+        <div class="run-card">
+          <div class="progress-ring" aria-hidden="true">
+            <span id="progressValue">0%</span>
+          </div>
+          <div>
+            <p class="eyebrow">активний крок</p>
+            <h3 id="currentStep">Немає активного експерименту</h3>
+            <p id="runHint">Після запуску помічник проведе вас по кроках і збере нотатки.</p>
+          </div>
+        </div>
+
+        <div class="step-controls">
+          <button class="secondary-button" id="prevStep" type="button">Назад</button>
+          <button class="primary-button" id="nextStep" type="button">Далі</button>
+        </div>
+
+        <label class="result-input">
+          Диктуйте або введіть результат
+          <textarea id="resultText" rows="4" placeholder="Наприклад: пробірка A змінила колір через 3 хвилини"></textarea>
+        </label>
+        <button class="primary-button full" id="saveObservation" type="button">Додати запис</button>
+      </section>
+
+      <section class="view" id="notesView">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">хронологія</p>
+            <h2>Лабораторні записи</h2>
+          </div>
+          <button class="secondary-button" id="exportNotes" type="button">Експорт</button>
+        </div>
+        <div class="notes-list" id="notesList"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

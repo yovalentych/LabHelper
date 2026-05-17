@@ -1,0 +1,9 @@
+{
+  "name": "LabHelper",
+  "short_name": "LabHelper",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f7faf8",
+  "theme_color": "#153d3a",
+  "description": "Мобільний лабораторний журнал з покроковим виконанням методик і голосовими нотатками."
+}
